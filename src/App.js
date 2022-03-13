@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import Contents from "./container/contents/contents";
+import Sidebar from "./container/side-bar/side-bar";
+import TopNav from "./container/top-nav/top-nav";
+
+import "./App.scss";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const toggleSidebar = () => {
+    setShow((prev) => !prev);
+  };
+
+  const sidebarRef = useRef(null);
+  const menuBtnRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      if (
+        !menuBtnRef.current.contains(e.target) &&
+        !sidebarRef.current.contains(e.target)
+      ) {
+        setShow(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("click");
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div
+        ref={sidebarRef}
+        style={{ transform: show ? "translateX(0)" : "" }}
+        className="container__left"
+      >
+        <Sidebar show={show} onClose={() => setShow(false)} />
+      </div>
+      <div className="container__right">
+        {/* <MenuButton menuBtnRef={menuBtnRef} onShow={toggleSidebar} /> */}
+        <TopNav />
+        <Contents menuBtnRef={menuBtnRef} onShow={toggleSidebar} />
+      </div>
     </div>
   );
 }

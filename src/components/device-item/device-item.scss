@@ -1,0 +1,45 @@
+.active {
+  &__device-item {
+    height: 64px;
+    display: flex;
+    position: relative;
+  }
+  &__device-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    color: var(--dark-blue);
+    width: 64px;
+    background-color: var(--lightest-blue);
+  }
+  &__device-info {
+    margin: auto 0;
+    margin-left: 16px;
+  }
+  &__device-name {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: var(--violet);
+  }
+  &__device-status {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      color: var(--green);
+      margin-left: -2px;
+      margin-right: 5px;
+    }
+  }
+  &__device-action {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -6px;
+    color: #b9b6cb;
+  }
+}

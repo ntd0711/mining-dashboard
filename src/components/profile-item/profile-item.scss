@@ -1,0 +1,33 @@
+.profile {
+  &__item {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background-color: var(--lightest-blue);
+    padding-left: 14px;
+  }
+  &__avatar {
+    margin-right: 20px;
+  }
+  &__info {
+  }
+  &-name {
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: var(--violet);
+  }
+  &-status {
+    display: flex;
+    align-items: center;
+  }
+  &-status-icon {
+    color: var(--green);
+    margin-left: -2px;
+    margin-right: 5px;
+  }
+  &-status-name {
+  }
+}

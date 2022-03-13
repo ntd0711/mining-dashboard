@@ -1,0 +1,19 @@
+.currency {
+  margin-bottom: 20px;
+  height: 97px;
+  padding: 22px 30px;
+  &__name {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--brown);
+    margin-bottom: 9px;
+  }
+  &__number {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--black-bold);
+  }
+  &__arrow {
+  }
+}

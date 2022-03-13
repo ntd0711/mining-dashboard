@@ -1,0 +1,55 @@
+.company {
+  height: 77px;
+  padding: 10px 16px;
+  display: flex;
+  background-color: var(--white);
+  margin-bottom: 15px;
+  &__img {
+    margin-right: 12px;
+  }
+  &__info {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px 0;
+  }
+  &__info-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info-name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #1e253a;
+  }
+  &__info-currency {
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: right;
+    letter-spacing: 0.02em;
+
+    color: var(--red);
+  }
+  &__info-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info-service {
+    color: var(--grey-mid);
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.02em;
+  }
+  &__info-date {
+    color: var(--grey-mid);
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.02em;
+  }
+}

@@ -1,0 +1,34 @@
+.container__right {
+  padding: 52px 75px 44px 72px;
+  background-color: var(--lightest-blue);
+}
+
+@media screen and (max-width: 1279.98px) {
+  .container__right {
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .wrapper {
+    grid-template-columns: 100%;
+  }
+  .container__left {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    transition: transform 0.2s ease;
+    z-index: 999;
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .container__right {
+    padding: 40px 20px;
+  }
+  .container__left {
+    width: 100%;
+  }
+}

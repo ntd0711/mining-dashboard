@@ -1,0 +1,253 @@
+.main {
+  max-width: 1011px;
+  &__top {
+    margin-bottom: 50px;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: 566px 416px;
+    column-gap: 30px;
+  }
+}
+.overview {
+  &__logo {
+    position: absolute;
+    right: 43px;
+    top: 79px;
+  }
+  &__bg-hero {
+    position: absolute;
+    right: -10px;
+    top: -26px;
+  }
+  &__heading {
+    margin-bottom: 27px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__hero {
+    position: relative;
+    width: 405px;
+    margin-right: 40px;
+  }
+  &__hero-top {
+    margin-bottom: 20px;
+  }
+  &__statistic {
+    padding: 40px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    &-heading {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 9px;
+    }
+    &-sum {
+      margin-bottom: 33px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &-date {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  &__statistic-group {
+    display: flex;
+    gap: 0 42px;
+    margin-bottom: 32px;
+  }
+  &__statistic-column {
+    & > h3 {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 12.5px;
+    }
+    & > p {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+  &__hero-bottom {
+  }
+  &__crypto {
+    display: flex;
+    gap: 0 20px;
+  }
+  &__crypto-card {
+    height: 157px;
+    width: 100%;
+    text-align: center;
+    color: var(--black-primary);
+
+    background-color: var(--white);
+  }
+  &__crypto-heading {
+    margin-bottom: 12px;
+    margin-top: 44px;
+
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.04em;
+  }
+  &__crypto-number {
+    margin-bottom: 13px;
+
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+
+    & > span {
+      margin-left: 5px;
+      color: var(--grey);
+    }
+  }
+  &__crypto-icon {
+    font-size: 20px;
+    color: #151515;
+  }
+  &__crypto-iconBitcoin {
+    color: #76b7ff;
+  }
+  &__market {
+    width: 202px;
+    margin-right: 35px;
+  }
+  &__companies {
+    flex-grow: 1;
+  }
+}
+
+.security {
+  &__heading {
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+}
+
+// MINING STATUS
+
+.mining {
+  &__status-wrapper {
+    display: grid;
+    grid-template-columns: 212px 175px;
+    column-gap: 29px;
+  }
+  &__status-heading {
+    margin-bottom: 20px;
+  }
+  &__status-daily {
+    margin: auto 0;
+
+    &-heading {
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #1c1c1f;
+      margin-bottom: 5px;
+    }
+    &-number {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+
+      color: var(--brown-light);
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .overview {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+    &__hero {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__market {
+      margin-right: 10px;
+      width: calc(50% - 10px);
+    }
+    &__companies {
+      margin-left: 10px;
+      width: calc(50% - 10px);
+    }
+  }
+
+  .main {
+    &__bottom {
+      grid-template-columns: 100%;
+    }
+  }
+  .security {
+    margin-bottom: 50px;
+  }
+  .mining {
+    &__status-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+    &__status-card {
+      padding-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .overview {
+    &__market {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    &__companies {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  .security {
+    &__list {
+      grid-template-columns: 100%;
+    }
+  }
+  .mining {
+    &__status-wrapper {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+.sidebar__open {
+  font-size: 20px;
+  color: var(--black-primary);
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar__open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .sidebar__open {
+    top: 40px;
+    right: 20px;
+  }
+}

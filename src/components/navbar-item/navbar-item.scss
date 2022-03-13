@@ -1,0 +1,39 @@
+.category {
+  &__item {
+    list-style: none;
+    height: 48px;
+    width: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2.4px solid var(--white);
+
+    border-radius: 13px;
+
+    background-clip: content-box;
+
+    transition: border 0.3s linear;
+
+    &:hover {
+      border: 2.4px solid var(--dark-blue);
+    }
+
+    cursor: pointer;
+  }
+  &__link {
+    color: var(--dark-blue);
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--white);
+  }
+  &__icon {
+  }
+}
