@@ -1,26 +1,22 @@
 import React from "react";
-import "./contents.scss";
-import Currency from "../../components/currency-item/currency";
-
-import { FaEthereum, FaBitcoin } from "react-icons/fa";
-import { FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
-import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-
+import { FaBitcoin, FaEthereum } from "react-icons/fa";
+import { FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
+import Company from "../../components/company-item/company";
+import Currency from "../../components/currency-item/currency";
+import MiningItem from "../../components/mining-item/mining-item";
+import SecurityItem from "../../components/security-item/security-item";
 import bg_hero from "../../images/Bg-Elements.png";
 import bitcoin_logo from "../../images/bitcoin-logo.png";
-import foodPandaImg from "../../images/foodpanda.png";
-import facebookImg from "../../images/facebook.png";
-import vodafoneImg from "../../images/vodafone.png";
-import uberImg from "../../images/uber.png";
 import citibankImg from "../../images/citibank.png";
-import Company from "../../components/company-item/company";
-
-import GPUIcon from "../../images/gpu.png";
-import USDIcon from "../../images/usd.png";
 import CPUIcon from "../../images/cpu.png";
-import SecurityItem from "../../components/security-item/security-item";
-import MiningItem from "../../components/mining-item/mining-item";
+import facebookImg from "../../images/facebook.png";
+import foodPandaImg from "../../images/foodpanda.png";
+import GPUIcon from "../../images/gpu.png";
+import uberImg from "../../images/uber.png";
+import USDIcon from "../../images/usd.png";
+import vodafoneImg from "../../images/vodafone.png";
+import "./contents.scss";
 
 function Contents({ menuBtnRef, onShow }) {
   const currencies = [
