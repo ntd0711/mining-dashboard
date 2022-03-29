@@ -1,17 +1,16 @@
 import React from "react";
-import "./top-nav.scss";
 import { BiBitcoin } from "react-icons/bi";
 import { FaEthereum } from "react-icons/fa";
-import NavbarItem from "../../components/navbar-item/navbar-item";
 import { FiSearch } from "react-icons/fi";
-import { IoLeaf } from "react-icons/io5";
-import { SiBinance } from "react-icons/si";
 import {
   GiBoatPropeller,
+  GiBullHorns,
   GiEagleEmblem,
   GiFlatPawPrint,
-  GiBullHorns,
 } from "react-icons/gi";
+import { IoLeaf } from "react-icons/io5";
+import NavbarItem from "../../components/navbar-item/navbar-item";
+import "./top-nav.scss";
 
 function TopNav() {
   const categories = [
@@ -36,7 +35,7 @@ function TopNav() {
       </div>
       <div className="navbar__left">
         <h2 className="heading__large">Search</h2>
-        <form action="javascript:void(0)" className="navbar__form">
+        <form className="navbar__form">
           <input
             className="navbar__input"
             placeholder="Enter Search Term"
