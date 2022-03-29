@@ -1,9 +1,8 @@
+import { useEffect, useRef, useState } from "react";
+import "./App.scss";
 import Contents from "./container/contents/contents";
 import Sidebar from "./container/side-bar/side-bar";
 import TopNav from "./container/top-nav/top-nav";
-
-import "./App.scss";
-import { useEffect, useRef, useState } from "react";
 
 function App() {
   const [show, setShow] = useState(false);
